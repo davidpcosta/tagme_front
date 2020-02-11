@@ -1,0 +1,65 @@
+.login-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url('/assets/img-bg-login.jpg') no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.login-container .login-form {
+    height: 420px;
+    max-width: 230px;
+    margin: auto;
+    margin-top: 300px;
+}
+
+.login-container .login-form h1 {
+    width: 175px;
+    height: 175px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 60px;
+    text-indent: -99999px;
+    background: url('/assets/logo-coco-bambu.png');
+    background-size: 175px;
+}
+
+.login-container .login-form .form-group {
+    margin-bottom: 10px;
+}
+
+.login-container .login-form label {
+    display: none;
+}
+
+.login-container .login-form input {
+    border: none;
+    font-style: italic;
+    padding: 10px;
+    padding-left: 50px;
+    width: 170px;
+}
+
+.login-container .login-form input.login {
+    background-image: url('/assets/icon-login.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+}
+
+.login-container .login-form input.senha {
+    background-image: url('/assets/icon-key.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+}
+
+.login-container .login-form button {
+    border: none;
+    background-color: #f67a20;
+    padding: 10px 0;
+    color: #ffffff;
+    width: 100%;
+}
