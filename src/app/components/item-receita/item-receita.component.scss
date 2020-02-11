@@ -1,0 +1,29 @@
+.item-receita  {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.item-receita .item-text-container {
+    width: 100%;
+    margin: 5px 15px;
+}
+
+.item-receita .item-text-container p {
+    font-size: 12px;
+}
+
+.item-receita a {
+    display: block;
+    width: 70px;
+    height: 40px;
+    padding: 15px;
+    margin: 45px 0;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f67a20;
+}

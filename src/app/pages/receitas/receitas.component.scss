@@ -43,3 +43,15 @@
     border: none;
     cursor: pointer;
 }
+
+.receitas-container .title-bar {
+    padding: 20px 0;
+    margin: 0 20px;
+    font-weight: bold;
+    color: #393939;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.receitas-container .receitas-list {
+    margin: 0 20px;
+}
