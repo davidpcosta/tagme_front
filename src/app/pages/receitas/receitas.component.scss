@@ -1,0 +1,45 @@
+.receitas-container {
+
+}
+
+.receitas-container header {
+    display: flex;
+    background-color: #393939;
+    padding: 15px;
+}
+
+.receitas-container header h1 {
+    width: 195px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    overflow: hidden;
+    text-indent: -99999px;
+    background: url('/assets/logo-coco-bambu-mini.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.receitas-container header .search-box {
+    width: 100%;
+    text-align: right;
+}
+
+.receitas-container header .search-box input {
+    font-style: italic;
+    border: none;
+    width: 250px;
+    padding: 0 15px;
+    height: 45px;
+    line-height: 45px;
+    vertical-align: middle;
+}
+
+.receitas-container header .search-box button {
+    float: right;
+    background-color: #ffffff;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+}
