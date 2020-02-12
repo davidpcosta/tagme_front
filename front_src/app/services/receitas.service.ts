@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { ItemReceita } from './interface/item-receita';
 import { Observable } from 'rxjs';
 import { DetalheReceita } from './interface/detalhe-receita';
-import { DetalheReceitaComponent } from '../pages/detalhe-receita/detalhe-receita.component';
 import { Api } from './api';
 
 @Injectable({
@@ -20,7 +19,6 @@ export class ReceitasService {
 
   getDetalheReceita(id: string): Observable<DetalheReceita> {
     console.log("Retrieving recipe details...");
-    const url = this.api.getUrlDetalheReceita(id);
-    return this.http.get<DetalheReceita>(url);
+    return this.http.get<DetalheReceita>(this.api.getUrlDetalheReceita(id));
   }
 }

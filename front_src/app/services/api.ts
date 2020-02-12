@@ -8,6 +8,7 @@ export class Api {
 
     private urlAuthentication = "login";
     private urlReceitas = "receitas";
+    private urlDetalheReceita = "receita/{id}";
 
     public getUrlAuthentication() : string {
         return environment.apiUrl + this.urlAuthentication;
@@ -18,6 +19,6 @@ export class Api {
     }
 
     public getUrlDetalheReceita(id: string) : string {
-        return environment.apiUrl + this.urlReceitas;
+        return environment.apiUrl + this.urlDetalheReceita.replace('{id}', id);
     }
 }
