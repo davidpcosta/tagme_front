@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ItemReceita } from 'src/app/service/interface/item-receita';
+import { ItemReceita } from 'src/app/services/interface/item-receita';
 import { Router } from '@angular/router';
 
 @Component({
