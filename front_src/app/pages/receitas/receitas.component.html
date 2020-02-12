@@ -1,0 +1,14 @@
+<div class="receitas-container">
+    <header>
+        <h1><a href="/">Coco Bambu</a></h1>
+        <div class="search-box">
+            <input type="text" [(ngModel)]="searchText" placeholder="Buscar receita..." />
+        </div>
+    </header>
+
+    <div class="title-bar">Receitas</div>
+
+    <div class="receitas-list" *ngIf="receitas">
+        <app-item-receita [receita]="receita" *ngFor="let receita of receitas()"></app-item-receita>
+    </div>
+</div>
