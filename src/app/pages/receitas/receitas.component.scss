@@ -9,10 +9,13 @@
 }
 
 .receitas-container header h1 {
-    width: 195px;
-    height: 45px;
     padding: 0;
     margin: 0;
+}
+
+.receitas-container header h1 a {
+    width: 195px;
+    height: 45px;
     float: left;
     overflow: hidden;
     text-indent: -99999px;
