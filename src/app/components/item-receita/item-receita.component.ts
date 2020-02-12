@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ItemReceita } from 'src/app/service/interface/item-receita';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-item-receita',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemReceitaComponent implements OnInit {
 
-  constructor() { }
+  @Input() public receita: ItemReceita;
+
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  goToReceita(movidId) {
+    this.router.navigate(["/receita/" + this.receita.id]);
+  }
 }

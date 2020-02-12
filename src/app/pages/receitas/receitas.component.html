@@ -11,7 +11,7 @@
 
     <div class="title-bar">Receitas</div>
 
-    <div class="receitas-list">
-        <app-item-receita></app-item-receita>
+    <div class="receitas-list" *ngIf="receitas">
+        <app-item-receita [receita]="receita" *ngFor="let receita of receitas"></app-item-receita>
     </div>
 </div>

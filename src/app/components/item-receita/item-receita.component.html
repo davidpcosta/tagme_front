@@ -1,8 +1,8 @@
 <div class="item-receita">
-    <img src="/assets/prato-arroz-marisco-peq.jpg" />
+    <img src="/assets/{{ receita.imageThumb }}" />
     <div class="item-text-container">
-        <h4>Arroz de mariscos</h4>
-        <p>Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado com pimentões e cebola juliene, temperos e um leve toque de açafrão. Servidos na paellera. Rico em sabor e apresentação.</p>
+        <h4>{{ receita.title }}</h4>
+        <p>{{ receita.description }}</p>
     </div>
-    <a href="#">Ver receita</a>
+    <a href="/receita/{{ receita.id }}">Ver receita</a>
 </div>
