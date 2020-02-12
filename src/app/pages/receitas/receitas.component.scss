@@ -34,17 +34,13 @@
     border: none;
     width: 250px;
     padding: 0 15px;
+    padding-right: 50px;
     height: 45px;
     line-height: 45px;
     vertical-align: middle;
-}
-
-.receitas-container header .search-box button {
-    float: right;
-    background-color: #ffffff;
-    height: 45px;
-    border: none;
-    cursor: pointer;
+    background-image: url("/assets/icon-busca.png");
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .receitas-container .title-bar {
