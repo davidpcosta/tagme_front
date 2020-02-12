@@ -4,25 +4,23 @@ import { ItemReceita } from './interface/item-receita';
 import { Observable } from 'rxjs';
 import { DetalheReceita } from './interface/detalhe-receita';
 import { DetalheReceitaComponent } from '../pages/detalhe-receita/detalhe-receita.component';
+import { Api } from './api';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReceitasService {
 
-  private _url = "/assets/data/receitas.json";
-  private _urlDetail = "/assets/data/rec-0{id}.json";
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private api: Api) { }
 
   getReceitas(): Observable<ItemReceita[]> {
     console.log("Retrieving recipes...");    
-    return this.http.get<ItemReceita[]>(this._url);
+    return this.http.get<ItemReceita[]>(this.api.getUrlReceitas());
   }
 
   getDetalheReceita(id: string): Observable<DetalheReceita> {
     console.log("Retrieving recipe details...");
-    const url = this._urlDetail.replace('{id}', id);
+    const url = this.api.getUrlDetalheReceita(id);
     return this.http.get<DetalheReceita>(url);
   }
 }

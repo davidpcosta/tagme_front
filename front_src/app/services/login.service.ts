@@ -2,18 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginResponse } from './interface/login-response';
 import { Observable } from 'rxjs';
+import { Api } from './api';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  private _url = "/assets/data/login.json";
+  constructor(private http: HttpClient, private api: Api) { }
 
-  constructor(private http: HttpClient) { }
-
-  validateLogin(): Observable<LoginResponse> {
-    console.log("Retrieving recipes...");    
-    return this.http.get<LoginResponse>(this._url);
+  validateLogin(login: any): Observable<LoginResponse> {
+    console.log("Validating login...");
+    return this.http.post<LoginResponse>(this.api.getUrlAuthentication(), login);
   }
 }

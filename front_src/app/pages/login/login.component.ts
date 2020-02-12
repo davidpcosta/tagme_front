@@ -9,14 +9,18 @@ import { LoginService } from '../../services/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  public login = {
+    login: "",
+    password: ""
+  };
+
   constructor(private service: LoginService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   public validateLogin() {
-
-    this.service.validateLogin().subscribe(
+    this.service.validateLogin(this.login).subscribe(
       data => {
         if(data.success) {
           this.router.navigate(['/receitas']);
