@@ -5,6 +5,6 @@ export interface DetalheReceita {
     imageLarge: string,
     description: string,
     prepTime: number,
-    ingredients: [],
-    steps: []
+    ingredients: any,
+    steps: any
 }

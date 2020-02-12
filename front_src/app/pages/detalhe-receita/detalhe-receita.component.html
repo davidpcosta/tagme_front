@@ -20,7 +20,7 @@
     <div class="ingredients">
         <h3>Ingredientes</h3>
         <ul>
-            <li class="ingredient-item" *ngFor="let ingredient of receita.ingredients">
+            <li class="ingredient-item {{ ingredient.checked ? 'checked' : '' }}" (click)="checkItem(ingredient)" *ngFor="let ingredient of receita.ingredients">
                 <div class="icon-check"></div>
                 <span class="name">{{ ingredient.amount }} {{ ingredient.name }}</span>
             </li>
@@ -30,7 +30,7 @@
     <div class="steps">
         <h3>Modo de preparo</h3>
         <ul>
-            <li class="step-item" *ngFor="let step of receita.steps">
+            <li class="step-item  {{ step.checked ? 'checked' : '' }}" (click)="checkItem(step)" *ngFor="let step of receita.steps">
                 <div class="icon-check"></div>
                 
                 <div class="step-text">
@@ -39,5 +39,17 @@
                 </div>
             </li>
         </ul>
+    </div>
+
+    <div class="bottom-bar">
+        <button type="button" (click)="finishPrep()" class="{{ !isAllChecked() ? 'disabled' : '' }}" [disabled]="!isAllChecked()">Finalizar preparação</button>
+    </div>
+
+    <div class="modal-container" *ngIf="showModal">
+        <div class="modal-box">
+            <h6>OBRIGADO</h6>
+            <p>Prato finalizado com sucesso!</p>
+            <button (click)="goToMain()" type="button">OK</button>
+        </div>
     </div>
 </div>

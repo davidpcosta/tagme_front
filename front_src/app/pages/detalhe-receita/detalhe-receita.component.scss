@@ -96,7 +96,7 @@
     border-bottom: 1px solid #f0f0f0;
 }
 
-.detalhe-receita-container .icon-check.selected {
+.detalhe-receita-container li.checked .icon-check {
     background-color: #66d701;
 }
 
@@ -126,4 +126,59 @@
 .detalhe-receita-container .steps .step-item strong {
     display: block;
     padding-top: 5px;
+}
+
+.detalhe-receita-container .bottom-bar {
+    border-top: 1px solid #f0f0f0;
+    background-color: #fafafa;
+    width: 100%;
+    display: table;
+}
+
+.detalhe-receita-container .bottom-bar button {
+    background-color: #f67a20;
+    float: right;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.detalhe-receita-container .bottom-bar button.disabled {
+    background-color: #cccccc;
+}
+
+.detalhe-receita-container .modal-container {
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.detalhe-receita-container .modal-container .modal-box {
+    position: relative;
+    top: 40%;
+    width: 250px;
+    background-color: #ffffff;
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+}
+
+.detalhe-receita-container .modal-container .modal-box h6 {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+}
+
+.detalhe-receita-container .modal-container .modal-box button {
+    padding: 15px 50px;
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    font-weight: bold;
+    margin-top: 30px;
 }
