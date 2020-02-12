@@ -11,7 +11,7 @@ import { DetalheReceita } from 'src/app/services/interface/detalhe-receita';
 export class DetalheReceitaComponent implements OnInit {
 
   private _receitaId = this.route.snapshot.paramMap.get("id");
-  public receita: DetalheReceita = {};
+  public receita: DetalheReceita ;
 
   constructor(private service: ReceitasService, private route: ActivatedRoute) { }
 

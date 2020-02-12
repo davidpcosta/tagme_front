@@ -1,1 +1,44 @@
-<p>detalhe-receita works!</p>
+<div class="detalhe-receita-container" *ngIf="receita">
+
+    <header [style.backgroundImage]="'url(/assets/'+ receita.imageLarge +')'">
+        <nav class="back-nav">
+            <a href="/receitas"> Voltar</a>
+        </nav>
+
+        <div class="prep-time">
+            <span>Tempo de preparo</span>
+            <strong>{{ receita.prepTime }} minutos</strong>
+        </div>
+
+        <div class="title-container">
+            <h1>{{ receita.title }}</h1>
+            <h2>{{ receita.description }}</h2>
+        </div>
+    </header>
+
+
+    <div class="ingredients">
+        <h3>Ingredientes</h3>
+        <ul>
+            <li class="ingredient-item" *ngFor="let ingredient of receita.ingredients">
+                <div class="icon-check"></div>
+                <span class="amount">{{ ingredient.amount }}</span>
+                <span class="name">{{ ingredient.name }}</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="steps">
+        <h3>Modo de preparo</h3>
+        <ul>
+            <li class="step-item" *ngFor="let step of receita.steps">
+                <div class="icon-check"></div>
+                
+                <div class="step-text">
+                    <strong>Passo {{ step.step }}</strong>
+                    {{ step.description }}
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
