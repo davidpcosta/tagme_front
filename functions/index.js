@@ -17,7 +17,7 @@ app.post('/login', (request, response) => {
         console.log(login, password);
 
         if (login != "user" || password != "1234") {
-            return response.status(401).send({ error: 'Login falhou! Cheque suas credenciais.' });
+            return response.status(401).send({ error: 'Login falhou! Cheque suas credenciais. login: user / password: 1234' });
         }
 
         response.send({

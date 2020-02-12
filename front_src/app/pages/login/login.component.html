@@ -13,5 +13,9 @@
         </div>
 
         <button type="button" (click)="validateLogin()">Acessar</button>
+
+        <div class="error-message" *ngIf="errorMessage">
+            {{ errorMessage }}
+        </div>
     </div>
 </div>

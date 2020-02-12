@@ -14,12 +14,15 @@ export class LoginComponent implements OnInit {
     password: ""
   };
 
+  public errorMessage = "";
+
   constructor(private service: LoginService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   public validateLogin() {
+    this.errorMessage = "";
     this.service.validateLogin(this.login).subscribe(
       data => {
         if(data.success) {
@@ -27,7 +30,8 @@ export class LoginComponent implements OnInit {
         }
       },
       error => {
-        console.log(error);
+        console.log(error.error.error);
+        this.errorMessage = error.error.error;
       }
     );
   }
