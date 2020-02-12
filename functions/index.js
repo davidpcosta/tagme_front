@@ -37,10 +37,18 @@ app.get('/receitas', (request, response) => {
     response.send(receitas);
 });
 
-// app.get('/receita', (request, response) => {
-//     let rawdata = fs.readFileSync('data/receitas.json');
-//     let receitas = JSON.parse(rawdata);
-//     response.send(receitas[2]);
-// });
+app.get('/receita/:id', (request, response) => {
+    let idReceita = request.params.id;
+    let rawdata = fs.readFileSync('data/receitas-detalhes.json');
+    let receitas = JSON.parse(rawdata);
+
+    receitas.forEach(function (receita) {
+        if (receita.id == idReceita) {
+            response.send(receita);
+            return;
+        }
+        return response.status(401).send({ error: 'Receita não encontrada.' });
+    });
+});
 
 exports.api = functions.https.onRequest(app);
