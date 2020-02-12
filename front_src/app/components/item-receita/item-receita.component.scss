@@ -9,6 +9,11 @@
     margin: 5px 15px;
 }
 
+.item-receita img {
+    width: auto;
+    height: 160px;
+}
+
 .item-receita .item-text-container p {
     font-size: 12px;
 }
@@ -26,4 +31,14 @@
     border-radius: 50%;
     cursor: pointer;
     background-color: #f67a20;
+}
+
+@media screen and (max-width: 600px) {
+    .item-receita a {
+        display: none;
+    }
+
+    .item-receita h4 {
+        margin-top: 0;
+    }
 }

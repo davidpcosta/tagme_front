@@ -17,7 +17,7 @@ export class ItemReceitaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToReceita(movidId) {
+  goToReceita() {
     this.router.navigate(["/receita/" + this.receita.id]);
   }
 }

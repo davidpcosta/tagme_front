@@ -54,3 +54,24 @@
 .receitas-container .receitas-list {
     margin: 0 20px;
 }
+
+@media screen and (max-width: 600px) {
+    .receitas-container header {
+        display: block;
+    }
+
+    .receitas-container header h1 {
+        text-align: center;
+
+    }
+
+    .receitas-container header h1 a {
+        float: none;
+        display: inline-block;
+    }
+
+    .receitas-container header .search-box input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

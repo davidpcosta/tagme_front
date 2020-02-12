@@ -80,6 +80,7 @@
     height: 35px;
     display: inline-block;
     vertical-align: middle;
+    box-sizing: border-box;
     background-color: #ffffff;
     background-image: url("/assets/icon-check.png");
     background-repeat: no-repeat;
@@ -101,10 +102,11 @@
 
 .detalhe-receita-container .ingredients .ingredient-item {
     margin: 20px 0;
+    display: flexbox;
 }
 
-.detalhe-receita-container .ingredients .ingredient-item span.amount {
-    margin-right: 5px;
+.detalhe-receita-container .ingredients .ingredient-item span.name {
+
 }
 
 .detalhe-receita-container .steps {
@@ -114,7 +116,7 @@
 
 .detalhe-receita-container .steps .step-item {
     margin-bottom: 50px;
-    display: flex;
+    display: flexbox;
 }
 
 .detalhe-receita-container .steps .step-item .icon-check {
@@ -122,10 +124,15 @@
 }
 
 .detalhe-receita-container .steps .step-item .step-text {
-    width: 100%;
+    margin-left: 65px;
 }
 
 .detalhe-receita-container .steps .step-item strong {
     display: block;
     padding-top: 5px;
+}
+
+@media screen and (max-width: 380px) {
+    .detalhe-receita-container .ingredients .ingredient-item {
+    }
 }

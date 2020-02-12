@@ -22,8 +22,7 @@
         <ul>
             <li class="ingredient-item" *ngFor="let ingredient of receita.ingredients">
                 <div class="icon-check"></div>
-                <span class="amount">{{ ingredient.amount }}</span>
-                <span class="name">{{ ingredient.name }}</span>
+                <span class="name">{{ ingredient.amount }} {{ ingredient.name }}</span>
             </li>
         </ul>
     </div>
