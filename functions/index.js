@@ -42,13 +42,15 @@ app.get('/receita/:id', (request, response) => {
     let rawdata = fs.readFileSync('data/receitas-detalhes.json');
     let receitas = JSON.parse(rawdata);
 
+    console.log(idReceita);
+    
+
     receitas.forEach(function (receita) {
         if (receita.id == idReceita) {
-            response.send(receita);
-            return;
+            return response.send(receita);
         }
-        return response.status(401).send({ error: 'Receita não encontrada.' });
     });
+    return response.status(401).send({ error: 'Receita não encontrada.' });
 });
 
 exports.api = functions.https.onRequest(app);
