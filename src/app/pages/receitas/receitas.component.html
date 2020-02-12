@@ -2,7 +2,7 @@
     <header>
         <h1>Coco Bambu</h1>
         <div class="search-box">
-            <input type="text" placeholder="Buscar receita..." />
+            <input type="text" [(ngModel)]="searchText" placeholder="Buscar receita..." />
             <button type="button">
                 <img src="/assets/icon-busca.png" />
             </button>
@@ -12,6 +12,6 @@
     <div class="title-bar">Receitas</div>
 
     <div class="receitas-list" *ngIf="receitas">
-        <app-item-receita [receita]="receita" *ngFor="let receita of receitas"></app-item-receita>
+        <app-item-receita [receita]="receita" *ngFor="let receita of receitas()"></app-item-receita>
     </div>
 </div>
