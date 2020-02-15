@@ -32,5 +32,4 @@ export class ReceitasComponent implements OnInit {
     }    
     return this._receitas;
   }
-
 }
